@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>CA3</title>
   </head>
   <body>
     <main>
       <section class="board">
-        <div class="center">
-          <div class="form">
+    
+          <div id="passChecker" class="form">
             <div class="formBox">
+              <h2>Password Strength Validator</h2>
               <input type="password" id="passwordSpace" />
               <div class="togglePassword">
-                <i class="eye"></i>
-                <i class="eyeSlash"></i>
+                <i class="fa fa-eye"></i>
+                <i class="fa fa-eye-slash"></i>
               </div>
               <div class="passPolicies">
                 <div class="polLength">8 Characters</div>
@@ -24,11 +27,25 @@
                 <div class="polLowercase">Contains Lowercase</div>
                 <div class="polNumber">Contains Number</div>
                 <div class="polSpecial">Contains Special Character</div>
+                </div>
               </div>
             </div>
-          </div>
         </div>
+        <div class="button">
+            <button onclick="showHide()">Show/Hide</button>
+        </div>
+            <hr>
+            <form action="#">
+            <select name="Mains" id="mainDishes"> 
+              <option>Beef</option>
+              <option>Chicken</option>
+              <option>Bean Burger</option>
+            </select>
+          <input type="submit">
+        </form>
+
       </section>
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>
