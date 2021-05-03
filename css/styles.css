@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, gray, black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.board {
+  min-height: 80vh;
+  background: white;
+  width: 60%;
+}
+#passwordSpace {
+  border-radius: 50px;
+  background-color: royalblue;
+  outline: none;
+}

@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>CA3</title>
-    
-</head>
-<body>
-    <div class="center">
-        <div class="form">
+  </head>
+  <body>
+    <main>
+      <section class="board">
+        <div class="center">
+          <div class="form">
             <div class="formBox">
-                <input type="password" id="passwordSpace">
-                <div class="togglePassword">
-                    <i class="eye"></i>
-                    <i class="eyeSlash"></i>
-                </div>
-                <div class="passPolicies">
-                    <div class="polLength">
-                        8 Characters
-                    </div>
-                    <div class="polNumber">
-                        Contains Number
-                    </div>
-                    <div class="polSpecial">
-                        Contains Special Character
-                    </div>
-                </div>
-
+              <input type="password" id="passwordSpace" />
+              <div class="togglePassword">
+                <i class="eye"></i>
+                <i class="eyeSlash"></i>
+              </div>
+              <div class="passPolicies">
+                <div class="polLength">8 Characters</div>
+                <div class="polUppercase">Contains Uppercase</div>
+                <div class="polLowercase">Contains Lowercase</div>
+                <div class="polNumber">Contains Number</div>
+                <div class="polSpecial">Contains Special Character</div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    
-</body>
+      </section>
+    </main>
+  </body>
 </html>
