@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* created a fade effect using opacity and centered everything inside it */
 main {
   min-height: 100vh;
   background: linear-gradient(to right top, gray, black);
@@ -10,10 +11,11 @@ main {
   align-items: center;
   justify-content: center;
 }
+/* created a fade effect using opacity */
 .board {
   min-height: 80vh;
   background: white;
-  width: 70%;
+  width: 85%;
   border-radius: 50px;
   background: linear-gradient(
     to right bottom,
@@ -26,6 +28,7 @@ main {
   background-color: white;
   outline: none;
 }
+/*had to set the display here to flex so I could change the togglePassword to absolute*/
 .form {
   padding: 5vh;
   display: flex;
@@ -36,7 +39,7 @@ main {
 .formBox {
   position: relative;
 }
-
+/* used this class to set the eye pic from the password checker */
 .togglePassword {
   position: absolute;
   width: 20px;
@@ -82,4 +85,18 @@ main {
 }
 .passPolicies > div.active {
   color: #111;
+}
+img {
+  border-radius: 50%;
+}
+#mybtn {
+  display: flex;
+}
+#output {
+  background: linear-gradient(to right top, gray, white);
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 30px;
 }

@@ -36,13 +36,34 @@
         </div>
             <hr>
             <form action="#">
-            <select name="Mains" id="mainDishes"> 
-              <option>Beef</option>
-              <option>Chicken</option>
-              <option>Bean Burger</option>
+              <select name="starters" id="starterDishes"> 
+                <option value="0">SELECT STARTER</option>
+                <option value="7">Bufallo Salad (V)</option>
+                <option value="9">Garlic Prawns</option>
+                <option value="8">Stuffed Mushroom (V)</option>
+              </select>
+            <select name="mains" id="mainDishes"> 
+              <option value="0">SELECT MAIN</option>
+              <option value="15">Steak and Fries</option>
+              <option value="10">Chicken Tikka and rice</option>
+              <option value="12">Bean Burger and Fries(V)</option>
             </select>
-          <input type="submit">
+            <select name="desserts" id="dessertDishes"> 
+              <option value="0">SELECT DESSERT</option>
+              <option value="7">Afogatto</option>
+              <option value="7">Tiramisu</option>
+              <option value="6">Caramel Profiteroles(V)</option>
+            </select>
+          <button type="button" id="submit">Total</button>
         </form>
+        <nav class="test">This is your total</nav>
+        <nav id="total">0</nav>
+        
+        <div class="container">
+          <h1>Fetch API</h1>
+          <button id="myBtn">Get Data</button>
+      </div>
+        <div id="output"></div>
 
       </section>
     </main>
