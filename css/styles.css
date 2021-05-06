@@ -89,7 +89,7 @@ main {
 img {
   border-radius: 50%;
 }
-#mybtn {
+.container {
   display: flex;
 }
 #output {
