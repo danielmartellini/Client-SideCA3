@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">  
 
     <title>CA3</title>
   </head>
   <body>
     <main>
       <section class="board">
-    
           <div id="passChecker" class="form">
             <div class="formBox">
               <h2>Password Strength Validator</h2>
@@ -34,7 +35,9 @@
         <div class="button">
             <button onclick="showHide()">Show/Hide</button>
         </div>
-            <hr>
+        <hr>
+        <div class="menu">
+           <h2>Choose your dishes</h2>
             <form>
               <select name="starters" id="starterDishes"> 
                 <option value="0">SELECT STARTER</option>
@@ -81,9 +84,11 @@
     </form>
     <nav class="test">This is your total</nav>
     <nav id="total">0</nav>
+  </div>
+  <hr>
         
         <div class="container">
-          <h1>Fetch API=> </h1>
+          <h1>Generate Custumers' Profiles </h1>
           <button id="myBtn">Get Data</button>
       </div>
         <div id="output"></div>

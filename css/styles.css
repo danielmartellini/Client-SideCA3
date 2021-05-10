@@ -1,29 +1,33 @@
 * {
+  font-family: "Ubuntu", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 /* created a fade effect using opacity and centered everything inside it */
 main {
-  min-height: 100vh;
   background: linear-gradient(to right top, gray, black);
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 /* created a fade effect using opacity */
 .board {
-  min-height: 80vh;
   background: white;
   width: 85%;
   border-radius: 50px;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.2)
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.75)
   );
 }
 #passwordSpace {
+  margin-top: 10px;
   border-radius: 50px;
   background-color: white;
   outline: none;
@@ -31,6 +35,7 @@ main {
 /*had to set the display here to flex so I could change the togglePassword to absolute*/
 .form {
   padding: 5vh;
+  padding-bottom: 0vh;
   display: flex;
 
   justify-content: center;
@@ -38,14 +43,16 @@ main {
 }
 .formBox {
   position: relative;
+  justify-content: center;
+  text-align: center;
 }
 /* used this class to set the eye pic from the password checker */
 .togglePassword {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 28px;
-  right: 140px;
+  top: 37px;
+  right: 85px;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -73,9 +80,9 @@ main {
 }
 
 .passPolicies.active {
-  opacity: 1;
+  opacity: 0.9;
   padding: 10px;
-  height: 180px;
+  height: auto;
 }
 .passPolicies > div {
   margin: 15px 10px;
@@ -91,12 +98,24 @@ img {
 }
 .container {
   display: flex;
+  flex-direction: column;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-evenly;
 }
 #output {
-  background: linear-gradient(to right top, gray, white);
   display: flex;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   justify-content: space-between;
-  overflow: hidden;
-  border-radius: 30px;
+  overflow: auto;
+  font-size: 85%;
+}
+.button {
+  padding: 10px;
+  text-align: center;
+}
+.menu {
+  padding: 15px;
+  text-align: center;
 }

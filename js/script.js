@@ -1,3 +1,4 @@
+//this is the function that hides the password checker, and shows it again after in case it's been hidden
 var a;
 function showHide() {
   if (a == 1) {
@@ -99,7 +100,7 @@ function getData() {
                     <div>
                         <ul>
                             <li>Name: ${lists.name.first}</li>
-                            <li><img src="${lists.picture.large}"></li>
+                            <li  style="list-style-type: none;"><img src="${lists.picture.large}"></li>
                             <li>Number: ${lists.cell}</li>
                             <li>Age: ${lists.dob.age}</li>
                             <li>Email: ${lists.email}</li>
