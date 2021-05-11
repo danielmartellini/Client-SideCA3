@@ -76,8 +76,8 @@ function mealTotal1() {
   let starter = +document.getElementById("starterDishes1").value;
   let mains = +document.getElementById("mainDishes1").value;
   let desserts = +document.getElementById("dessertDishes1").value;
-  total1 = starter + mains + desserts;
-  document.getElementById("total1").innerHTML =""+ total1 + " EURO";
+  total1 = starter + mains + desserts ;
+  document.getElementById("total1").innerHTML = + total1 + " EURO";
 }
 function mealTotal2() {
   let starter = +document.getElementById("starterDishes2").value;
@@ -130,7 +130,7 @@ function getData() {
                     <div>
                         <ul>
                             <li>Name: ${lists.name.first}</li>
-                            <li  style="list-style-type: none;"><img src="${lists.picture.large}"></li>
+                            <li  style="list-style-type: none;"><img id="thumbImg" src="${lists.picture.large}"></li>
                             <li>Number: ${lists.cell}</li>
                             <li>Age: ${lists.dob.age}</li>
                             <li>Email: ${lists.email}</li>
@@ -146,3 +146,14 @@ function getData() {
       document.getElementById("output").innerHTML = output;
     });
 }
+//changing background picture
+
+let pics = ['../img/background.jpg','../img/background2.jpg','../img/background3.jpg',]
+setInterval(function(){
+  let random = Math.floor(Math.random()*3);
+  document.main.style.backgroundImage=url('pics[1]');
+},100);
+
+console.log('test');
+
+

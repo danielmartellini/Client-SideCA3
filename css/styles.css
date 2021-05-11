@@ -5,11 +5,12 @@
   box-sizing: border-box;
 }
 /* created a fade effect using opacity and centered everything inside it */
-main {
+#pic {
   background: linear-gradient(to right top, gray, black);
   background-image: url(../img/background.jpg);
   background-size: cover;
   min-height: 100vh;
+  padding: 10vh;
 
   display: flex;
   align-items: center;
@@ -17,7 +18,8 @@ main {
 }
 /* created a fade effect using opacity */
 .board {
-  background: white;
+  justify-content: center;
+  min-height: 60vh;
   width: 85%;
   border-radius: 50px;
   background: linear-gradient(
@@ -90,7 +92,7 @@ main {
 .passPolicies > div.active {
   color: #111;
 }
-img {
+#thumbImg {
   border-radius: 50%;
 }
 .container {
@@ -98,7 +100,7 @@ img {
   flex-direction: column;
   padding: 15px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 #output {
   display: flex;
@@ -118,4 +120,45 @@ img {
 }
 #passChecker {
   padding-bottom: 0;
+}
+.arrowRight {
+  position: absolute;
+  max-width: 150px;
+  max-height: 150px;
+  top: 250px;
+  right: 55px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.arrowRight:hover {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+.arrowLeft {
+  position: absolute;
+  max-width: 150px;
+  max-height: 150px;
+  top: 250px;
+  left: 55px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.arrowLeft:hover {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
