@@ -34,14 +34,12 @@ main {
 }
 /*had to set the display here to flex so I could change the togglePassword to absolute*/
 .form {
-  padding: 5vh;
-  padding-bottom: 0vh;
+  padding: 1vh;
   display: flex;
-
   justify-content: center;
-  border-radius: 50px;
 }
 .formBox {
+  padding-top: 2vh;
   position: relative;
   justify-content: center;
   text-align: center;
@@ -50,8 +48,7 @@ main {
 .togglePassword {
   position: absolute;
   width: 20px;
-  height: 20px;
-  top: 37px;
+  top: 52px;
   right: 85px;
   cursor: pointer;
   border-radius: 50%;
@@ -118,4 +115,7 @@ img {
 .menu {
   padding: 15px;
   text-align: center;
+}
+#passChecker {
+  padding-bottom: 0;
 }
