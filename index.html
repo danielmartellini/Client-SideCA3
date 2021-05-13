@@ -36,7 +36,7 @@
       </div>
       </div>
       <div class="button">
-        <button onclick="showHide()">Show/Hide</button>
+        <button class="myButtons" onclick="showHide()">Show/Hide</button>
       </div>
       <hr>
       <div class="menu" id="menu">
@@ -59,10 +59,16 @@
             <option value="7">Afogatto</option>
             <option value="7">Tiramisu</option>
             <option value="6">Caramel Profiteroles(V)</option>
-         
+          </select>
+            <select name="drinks" id="drinks1">
+              <option value="0">SELECT DRINK</option>
+              <option value="3.5">Diet Coke</option>
+              <option value="4">Coke</option>
+              <option value="3.5">Sprite</option>
+              <option value="5.5">Beer</option>
           </select>
          
-          <div id="total1"></div>
+          <div class="totalBox" id="total1"></div>
           
         </form>
       
@@ -87,8 +93,16 @@
             <option value="6">Caramel Profiteroles(V)</option>
             
           </select>
+          <select name="drinks" id="drinks2">
+            <option value="0">SELECT DRINK</option>
+            <option value="3.5">Diet Coke</option>
+            <option value="4">Coke</option>
+            <option value="3.5">Sprite</option>
+            <option value="5.5">Beer</option>
+            
+          </select>
           
-            <div id="total2"></div>
+            <div class="totalBox" id="total2"></div>
         </form>
        
        
@@ -111,18 +125,91 @@
             <option value="7">Tiramisu</option>
             <option value="6">Caramel Profiteroles(V)</option>
           </select>
+          <select name="drinks" id="drinks3">
+            <option value="0">SELECT DRINK</option>
+            <option value="3.5">Diet Coke</option>
+            <option value="4">Coke</option>
+            <option value="3.5">Sprite</option>
+            <option value="5.5">Beer</option>
+        </select>
         
-          <div id="total3"></div>
+          <div class="totalBox" id="total3"></div>
         </form>
+       
+        <form class="form" id="form4">
+          <select name="starters" id="starterDishes4">
+            <option value="0">SELECT STARTER</option>
+            <option value="7">Bufallo Salad (V)</option>
+            <option value="9">Garlic Prawns</option>
+            <option value="8">Stuffed Mushroom (V)</option>
+          </select>
+          <select name="mains" id="mainDishes4">
+            <option value="0">SELECT MAIN</option>
+            <option value="15">Steak and Fries</option>
+            <option value="10">Chicken Tikka and rice</option>
+            <option value="12">Bean Burger and Fries(V)</option>
+          </select>
+          <select name="desserts" id="dessertDishes4">
+            <option value="0">SELECT DESSERT</option>
+            <option value="7">Afogatto</option>
+            <option value="7">Tiramisu</option>
+            <option value="6">Caramel Profiteroles(V)</option>
+          </select>
+          <select name="drinks" id="drinks4">
+            <option value="0">SELECT DRINK</option>
+            <option value="3.5">Diet Coke</option>
+            <option value="4">Coke</option>
+            <option value="3.5">Sprite</option>
+            <option value="5.5">Beer</option>
+        </select>
         
-        <button type="button" id="submit">Total</button>
-        <div id="totalFinal"></div>
+          <div class="totalBox" id="total4"></div>
+        </form>
+              
+        <form class="form" id="form5">
+          <select name="starters" id="starterDishes5">
+            <option value="0">SELECT STARTER</option>
+            <option value="7">Bufallo Salad (V)</option>
+            <option value="9">Garlic Prawns</option>
+            <option value="8">Stuffed Mushroom (V)</option>
+          </select>
+          <select name="mains" id="mainDishes5">
+            <option value="0">SELECT MAIN</option>
+            <option value="15">Steak and Fries</option>
+            <option value="10">Chicken Tikka and rice</option>
+            <option value="12">Bean Burger and Fries(V)</option>
+          </select>
+          <select name="desserts" id="dessertDishes5">
+            <option value="0">SELECT DESSERT</option>
+            <option value="7">Afogatto</option>
+            <option value="7">Tiramisu</option>
+            <option value="6">Caramel Profiteroles(V)</option>
+          </select>
+          <select name="drinks" id="drinks5">
+            <option value="0">SELECT DRINK</option>
+            <option value="3.5">Diet Coke</option>
+            <option value="4">Coke</option>
+            <option value="3.5">Sprite</option>
+            <option value="5.5">Beer</option>
+        </select>
+        
+          <div class="totalBox" id="total5"></div>
+        </form>
+ 
+       
+        <div class="totals" >
+          <div class="totalBox" id="startersTotal">STARTERS TOTAL</div>
+          <div class="totalBox" id="mainsTotal">MAINS TOTAL</div>
+          <div class="totalBox" id="dessertsTotal">DESSERTS TOTAL</div>
+          <div class="totalBox" id="drinksTotal">DRINKS:</div>
+        <div class="totalBox" id="totalFinal">ORDER TOTAL</div>
+        </div>
       </div>
       <hr>
 
       <div class="container">
         <h1>Generate Custumers' Profiles </h1>
-        <button id="myBtn">Get Data</button>
+        <button class="myButtons" id="myBtn">Get Data</button>
       </div>
       <div id="output"></div>
 

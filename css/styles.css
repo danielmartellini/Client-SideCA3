@@ -31,7 +31,12 @@
 #passwordSpace {
   margin-top: 10px;
   border-radius: 50px;
-  background-color: white;
+  min-width: 200px;
+  background: linear-gradient(
+    to left top,
+    rgba(241, 241, 241, 0.9),
+    rgba(255, 255, 255, 0.8)
+  );
   outline: none;
 }
 /*had to set the display here to flex so I could change the togglePassword to absolute*/
@@ -45,13 +50,14 @@
   position: relative;
   justify-content: center;
   text-align: center;
+  padding-bottom: 0px;
 }
 /* used this class to set the eye pic from the password checker */
 .togglePassword {
-  position: absolute;
+  position: relative;
   width: 20px;
-  top: 52px;
-  right: 85px;
+  bottom: 20px;
+  left: 30px;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -86,11 +92,11 @@
 .passPolicies > div {
   margin: 15px 10px;
   font-weight: 600;
-  color: #888;
+  color: rgb(173, 10, 10);
   transition: all 300ms ease-in-out;
 }
 .passPolicies > div.active {
-  color: #111;
+  color: rgb(4, 170, 26);
 }
 #thumbImg {
   border-radius: 50%;
@@ -109,6 +115,12 @@
   justify-content: space-between;
   overflow: auto;
   font-size: 85%;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.6)
+  );
+  border-radius: inherit;
 }
 .button {
   padding: 10px;
@@ -161,4 +173,66 @@
   -o-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
   transform: rotate(-10deg);
+}
+
+.totalBox {
+  padding-left: 30px;
+  padding-right: 30px;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8)
+  );
+  min-width: 200px;
+  max-width: 200px;
+  border-radius: 50px;
+
+  padding-left: 15px;
+  overflow: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+select {
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8)
+  );
+  min-width: 200px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.myButtons {
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8)
+  );
+  min-width: 200px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.totals {
+  display: inline-flex;
+  padding: 20px;
 }
