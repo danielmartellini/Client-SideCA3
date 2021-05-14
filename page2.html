@@ -15,13 +15,178 @@
     <title>CA3</title>
   </head>
   <body>
-    <main id="pic">
+    <main id="pic" class="pic2">
       <div>
-        <a href="index.html"
+        <a id="arrowLeft" href="index.html"
           ><img class="arrowLeft" src="img/pizzaArrowLeft.png"
         /></a>
       </div>
-      <section class="board"></section>
+      <section class="board">
+        <div class="myMenu">
+          <div class="menuItem"><h2>Get to know our Menu:</h2></div>
+          <div class="padding"></div>
+          <button id="startersBtn" class="menuBtn myButtons">STARTERS</button>
+          <div class="padding"></div>
+          <div id="myStarters" class="menuSection">
+            <div class="menuItem">
+              <div class="menuCard">
+                <img
+                  class="imgStyle"
+                  src="img/bufalosalad.jpg"
+                  alt="Bufalo Salad"
+                />
+                <div class="container">
+                  <h4><b>Bufallo Salad</b></h4>
+                  <p>Buffalo Mozzarela with pesto and tomatos</p>
+                  <p>€7.00</p>
+                </div>
+              </div>
+              <div class="menuCard">
+                <img
+                  class="imgStyle"
+                  src="img/garlicPrawns.jpg"
+                  alt="Garlic Prawns"
+                />
+                <div class="container">
+                  <h4><b>Garlic Prawns</b></h4>
+                  <p>Slighly Spice</p>
+                  <p>€9.00</p>
+                </div>
+              </div>
+              <div class="menuCard">
+                <img
+                  class="imgStyle"
+                  src="img/stuffedMushroom.jpg"
+                  alt="Stuffed Mushroom"
+                />
+                <div class="container">
+                  <h4><b>Stuffed Mushroom</b></h4>
+                  <p>Portobello Mushroom filled with spices</p>
+                  <p>€8.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="padding"></div>
+          <button id="mainsBtn" class="menuBtn myButtons">MAINS</button>
+          <div class="padding"></div>
+          <div id="myMains" class="menuSection">
+            <div class="menuItem">
+              <div class="menuCard">
+                <img
+                  class="imgStyle"
+                  src="img/pepizza.jpg"
+                  alt="Peperoni pizza"
+                />
+                <div class="container">
+                  <h4><b>Peperoni Pizza</b></h4>
+                  <p>Made with Italian ingredients</p>
+                  <p>€15.00</p>
+                </div>
+              </div>
+              <div class="menuCard">
+                <img
+                  class="imgStyle"
+                  src="img/greenpasta.jpg"
+                  alt="Green Pasta"
+                />
+                <div class="container">
+                  <h4><b>Green Pasta (V)</b></h4>
+                  <p>Made with Pesto, Bechamel and Spinach</p>
+                  <p>€10.00</p>
+                </div>
+              </div>
+              <div class="menuCard">
+                <img
+                  class="imgStyle"
+                  src="img/cheesepizza.jpg"
+                  alt="Avatar"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <h4><b>4 Cheese Pizza</b></h4>
+                  <p>Made with a mix of French and Italian Cheeses</p>
+                  <p>€12.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="padding"></div>
+          <button id="dessertsBtn" class="menuBtn myButtons">DESSERTS</button>
+          <div class="padding"></div>
+          <div id="myDesserts" class="menuSection">
+            <div class="menuItem">
+              <div class="menuCard">
+                <img class="imgStyle" src="img/affogato.jpg" alt="affogato" />
+                <div class="container">
+                  <h4><b>Afogatto</b></h4>
+                  <p>Vanilla Ice Cream served with an shot of Espresso</p>
+                  <p>€7.00</p>
+                </div>
+              </div>
+              <div class="menuCard">
+                <img class="imgStyle" src="img/tiramisu.jpg" alt="Tiramisu" />
+                <div class="container">
+                  <h4><b>Tiramisu</b></h4>
+                  <p>Coffee & Biscuit Cake</p>
+                  <p>€7.00</p>
+                </div>
+              </div>
+              <div class="menuCard">
+                <img
+                  class="imgStyle"
+                  src="img/profiterole.jpg"
+                  alt="Avatar"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <h4><b>Profiteroles</b></h4>
+                  <p>Five Italian made profiteroles</p>
+                  <p>€6.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="padding"></div>
+          <button id="drinksBtn" class="menuBtn myButtons">DRINKS</button>
+
+          <div class="padding"></div>
+          <div id="myDrinks" class="menuSection">
+            <div class="menuItem">
+              <div class="menuCard">
+                <img class="imgStyle" src="img/sprite.jpg" alt="Sprite" />
+                <div class="container">
+                  <h4><b>Sprite</b></h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+
+              <div class="menuCard">
+                <img class="imgStyle" src="img/coke.jpg" alt="Coke" />
+                <div class="container">
+                  <h4><b>Coke</b></h4>
+                  <p>€4.00</p>
+                </div>
+              </div>
+              <div class="menuCard">
+                <img
+                  class="imgStyle"
+                  src="img/dietCoke.jpg"
+                  alt="Diet Coke"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <h4><b>Diet Coke</b></h4>
+                  <p>€3.50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        ​
+      </section>
     </main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/scriptMenu.js"></script>
   </body>
 </html>

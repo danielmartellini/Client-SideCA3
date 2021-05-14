@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <main id="pic">
+  <main id="pic" >
     <section class="board">
       <div id="passChecker" class="form">
         <div class="formBox">
@@ -36,7 +36,7 @@
       </div>
       </div>
       <div class="button">
-        <button class="myButtons" onclick="showHide()">Show/Hide</button>
+        <button class="myButtons" id="clickHide">Show/Hide</button>
       </div>
       <hr>
       <div class="menu" id="menu">
@@ -50,15 +50,15 @@
           </select>
           <select name="mains" id="mainDishes1">
             <option value="0">SELECT MAIN</option>
-            <option value="15">Steak and Fries</option>
-            <option value="10">Chicken Tikka and rice</option>
-            <option value="12">Bean Burger and Fries(V)</option>
+            <option value="15">Peperoni Pizza</option>
+            <option value="10">Green Pasta (V)</option>
+            <option value="12">Cheese Pizza</option>
           </select>
           <select name="desserts" id="dessertDishes1">
             <option value="0">SELECT DESSERT</option>
             <option value="7">Afogatto</option>
             <option value="7">Tiramisu</option>
-            <option value="6">Caramel Profiteroles(V)</option>
+            <option value="6">Caramel Profiteroles</option>
           </select>
             <select name="drinks" id="drinks1">
               <option value="0">SELECT DRINK</option>
@@ -82,15 +82,15 @@
           </select>
           <select name="mains" id="mainDishes2">
             <option value="0">SELECT MAIN</option>
-            <option value="15">Steak and Fries</option>
-            <option value="10">Chicken Tikka and rice</option>
-            <option value="12">Bean Burger and Fries(V)</option>
+            <option value="15">Peperoni Pizza</option>
+            <option value="10">Green Pasta (V)</option>
+            <option value="12">Cheese Pizza</option>
           </select>
           <select name="desserts" id="dessertDishes2">
             <option value="0">SELECT DESSERT</option>
             <option value="7">Afogatto</option>
             <option value="7">Tiramisu</option>
-            <option value="6">Caramel Profiteroles(V)</option>
+            <option value="6">Caramel Profiteroles</option>
             
           </select>
           <select name="drinks" id="drinks2">
@@ -115,15 +115,15 @@
           </select>
           <select name="mains" id="mainDishes3">
             <option value="0">SELECT MAIN</option>
-            <option value="15">Steak and Fries</option>
-            <option value="10">Chicken Tikka and rice</option>
-            <option value="12">Bean Burger and Fries(V)</option>
+            <option value="15">Peperoni Pizza</option>
+            <option value="10">Green Pasta (V)</option>
+            <option value="12">Cheese Pizza</option>
           </select>
           <select name="desserts" id="dessertDishes3">
             <option value="0">SELECT DESSERT</option>
             <option value="7">Afogatto</option>
             <option value="7">Tiramisu</option>
-            <option value="6">Caramel Profiteroles(V)</option>
+            <option value="6">Caramel Profiteroles</option>
           </select>
           <select name="drinks" id="drinks3">
             <option value="0">SELECT DRINK</option>
@@ -145,15 +145,15 @@
           </select>
           <select name="mains" id="mainDishes4">
             <option value="0">SELECT MAIN</option>
-            <option value="15">Steak and Fries</option>
-            <option value="10">Chicken Tikka and rice</option>
-            <option value="12">Bean Burger and Fries(V)</option>
+            <option value="15">Peperoni Pizza</option>
+            <option value="10">Green Pasta (V)</option>
+            <option value="12">Cheese Pizza</option>
           </select>
           <select name="desserts" id="dessertDishes4">
             <option value="0">SELECT DESSERT</option>
             <option value="7">Afogatto</option>
             <option value="7">Tiramisu</option>
-            <option value="6">Caramel Profiteroles(V)</option>
+            <option value="6">Caramel Profiteroles</option>
           </select>
           <select name="drinks" id="drinks4">
             <option value="0">SELECT DRINK</option>
@@ -175,15 +175,15 @@
           </select>
           <select name="mains" id="mainDishes5">
             <option value="0">SELECT MAIN</option>
-            <option value="15">Steak and Fries</option>
-            <option value="10">Chicken Tikka and rice</option>
-            <option value="12">Bean Burger and Fries(V)</option>
+            <option value="15">Peperoni Pizza</option>
+            <option value="10">Green Pasta (V)</option>
+            <option value="12">Cheese Pizza</option>
           </select>
           <select name="desserts" id="dessertDishes5">
             <option value="0">SELECT DESSERT</option>
             <option value="7">Afogatto</option>
             <option value="7">Tiramisu</option>
-            <option value="6">Caramel Profiteroles(V)</option>
+            <option value="6">Caramel Profiteroles</option>
           </select>
           <select name="drinks" id="drinks5">
             <option value="0">SELECT DRINK</option>
@@ -195,14 +195,22 @@
         
           <div class="totalBox" id="total5"></div>
         </form>
+
+        <div class="totals" >
+          <div class="totalBox label" > <b>STARTERS:</b></div>
+          <div class="totalBox label" ><b>MAINS:</b></div>
+          <div class="totalBox label" ><b>DESSERTS:</b></div>
+          <div class="totalBox label" ><b>DRINKS:</b></div>
+        <div class="totalBox label"><b>ORDER TOTAL:</b></div>
+        </div>
  
        
         <div class="totals" >
-          <div class="totalBox" id="startersTotal">STARTERS TOTAL</div>
-          <div class="totalBox" id="mainsTotal">MAINS TOTAL</div>
-          <div class="totalBox" id="dessertsTotal">DESSERTS TOTAL</div>
-          <div class="totalBox" id="drinksTotal">DRINKS:</div>
-        <div class="totalBox" id="totalFinal">ORDER TOTAL</div>
+          <div class="totalBox" id="startersTotal"></div>
+          <div class="totalBox" id="mainsTotal"></div>
+          <div class="totalBox" id="dessertsTotal"></div>
+          <div class="totalBox" id="drinksTotal"></div>
+        <div class="totalBox" id="totalFinal"></div>
         </div>
       </div>
       <hr>
@@ -215,7 +223,7 @@
 
     </section>
     <div>
-      <a href="page2.html"><img class="arrowRight" src="img/pizzaArrowRight.png"></a>
+      <a href="page2.html"><img   class="arrowRight" src="img/pizzaArrowRight.png"></a>
     </div>
     
   </main>

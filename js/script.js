@@ -1,14 +1,3 @@
-//this is the function that hides the password checker, and shows it again after in case it's been hidden
-var a;
-function showHide() {
-  if ( a == 1) {
-    document.getElementById("passChecker").style.display = "flex";
-    return (a = 0);
-  } else {
-    document.getElementById("passChecker").style.display = "none";
-    return (a = 1);
-  }
-}
 
 function idName(name) {
   return document.getElementById(name);
@@ -17,6 +6,25 @@ function idName(name) {
 function className(name) {
   return document.getElementsByClassName(name);
 }
+
+
+//this is the function that hides the password checker, and shows it again after in case it's been hidden
+var a;
+function showHide() {
+  if ( a == 1) {
+    idName("passChecker").style.display = "flex";
+    return (a = 0);
+  } else {
+    idName("passChecker").style.display = "none";
+    return (a = 1);
+  }
+}
+idName("clickHide").addEventListener("click",showHide);
+
+
+
+
+
 
 className("togglePassword")[0].addEventListener("click", function () {
   className("togglePassword")[0].classList.toggle("active");
@@ -147,11 +155,11 @@ function addDesserts(){
   document.getElementById("dessertsTotal").innerHTML =dessertsTotal + " EURO";
 }
 function addDrinks(){
-  let drinks1= +document.getElementById("drink1").value;
-  let drinks2= +document.getElementById("drink2").value;
-  let drinks3= +document.getElementById("drink3").value;
-  let drinks4= +document.getElementById("drink4").value;
-  let drinks5= +document.getElementById("drink5").value;
+  let drinks1= +document.getElementById("drinks1").value;
+  let drinks2= +document.getElementById("drinks2").value;
+  let drinks3= +document.getElementById("drinks3").value;
+  let drinks4= +document.getElementById("drinks4").value;
+  let drinks5= +document.getElementById("drinks5").value;
   drinksTotal= drinks1+drinks2+drinks3+drinks4+drinks5;
   document.getElementById("drinksTotal").innerHTML =drinksTotal + " EURO";
 }
@@ -160,7 +168,7 @@ function addDrinks(){
 function totalFinal(){
   var total;
   total=total1+total2+total3+total4+total5;
-  document.getElementById("totalFinal").innerHTML = total;
+  document.getElementById("totalFinal").innerHTML = "€"+total+"EUR";
 }
 
 
@@ -215,6 +223,7 @@ function getData() {
       document.getElementById("output").innerHTML = output;
     });
 }
+
 
 
 

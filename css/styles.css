@@ -107,6 +107,11 @@
   padding: 15px;
   align-items: center;
   justify-content: space-between;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.6)
+  );
 }
 #output {
   display: flex;
@@ -167,12 +172,46 @@
   transition: all 0.5s ease;
   overflow: hidden;
 }
-.arrowLeft:hover {
+@-webkit-keyframes roll {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes roll {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
   -webkit-transform: rotate(-10deg);
   -moz-transform: rotate(-10deg);
   -o-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
   transform: rotate(-10deg);
+  -moz-animation-name: roll;
+  -moz-animation-duration: 4s;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-name: roll;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
 }
 
 .totalBox {
@@ -190,6 +229,7 @@
   padding-left: 15px;
   overflow: hidden;
 }
+/*Changed the default scroll bar*/
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -234,5 +274,70 @@ select {
 
 .totals {
   display: inline-flex;
+  background: none;
+}
+
+​ .label {
+  padding: 10px;
+  size: 120%;
+}
+
+.myMenu {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
   padding: 20px;
+}
+.myButtons {
+  max-width: 200px;
+  text-align: center;
+}
+
+.menuItem {
+  display: flex;
+}
+.imgStyle {
+  max-height: 100px;
+  border-radius: 25px;
+}
+.menuCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 180px;
+  text-align: center;
+
+  padding: 10px;
+  align-content: space-evenly;
+}
+.menuSection {
+  padding: 20px;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8)
+  );
+
+  border-radius: 50px;
+}
+#runaway-container {
+  position: absolute;
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+#runaway {
+  width: 150px;
+}
+.padding {
+  padding: 10px;
+  display: block;
+}
+.menuBtn:hover {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
