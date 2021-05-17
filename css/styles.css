@@ -312,6 +312,7 @@ select {
 }
 .menuSection {
   padding: 20px;
+  display: none;
   background: linear-gradient(
     to left top,
     rgba(255, 255, 255, 0.9),

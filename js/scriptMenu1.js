@@ -7,9 +7,23 @@ function className(name) {
 }
 
 
-var a=0;
-function showHide(parameter){
+$(document).ready(function(){
+
+  $("#startersBtn").click(function(){
+    $("#myStarters").fadeToggle(500);
+  });
+
+  $("#mainsBtn").click(function(){
+    $("#myMains").slideToggle(5000);
+  });
   
+
+});
+
+
+
+function showHide(parameter){
+  var a=0;
 if ( a == 1) {
   idName(parameter).style.display = "none";
   return (a = 0);
@@ -20,12 +34,6 @@ if ( a == 1) {
 }
 
 
-idName("startersBtn").addEventListener("click",function(){
-  showHide("myStarters");
-}, false);
-idName("mainsBtn").addEventListener("click",function(){
-  showHide("myMains");
-}, false);
 
 idName("dessertsBtn").addEventListener("click",function(){
   showHide("myDesserts");

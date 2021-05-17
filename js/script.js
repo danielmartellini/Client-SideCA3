@@ -1,4 +1,8 @@
 
+
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"
 function idName(name) {
   return document.getElementById(name);
 }
@@ -10,18 +14,20 @@ function className(name) {
 
 //this is the function that hides the password checker, and shows it again after in case it's been hidden
 var a;
-function showHide() {
+var b = "passChecker";
+function showHide(parameter){
   if ( a == 1) {
-    idName("passChecker").style.display = "flex";
+    idName(parameter).style.display = "flex";
     return (a = 0);
   } else {
-    idName("passChecker").style.display = "none";
+    idName(parameter).style.display = "none";
     return (a = 1);
   }
 }
-idName("clickHide").addEventListener("click",showHide);
 
-
+idName("clickHide").addEventListener("click",function(){
+  showHide("passChecker");
+}, false);
 
 
 
@@ -76,117 +82,73 @@ idName("passwordSpace").addEventListener("keyup", function () {
 });
 //I declared the variables outside so they would be global
 var total1=0;
-var total2=0;
-var total3=0;
-var total4=0;
-var total5=0;
-var dessertsTotal=0;
-var mainsTotal=0;
-var startersTotal=0;
+var meal1=idName("startersTotal");
+
 var total=0;
 
-function mealTotal1() {
-  let starter = +document.getElementById("starterDishes1").value;
-  let mains = +document.getElementById("mainDishes1").value;
-  let drinks = +document.getElementById("drinks1").value;
-  let desserts = +document.getElementById("dessertDishes3").value;
+
+
+function mealTotal(param1,param2,param3,param4,totalDisplay) {
+  let starter = +idName(param1).value;
+  let mains = +idName(param2).value;
+  let drinks = +idName(param3).value;
+  let desserts = +idName(param4).value;
   total1 = starter + mains + desserts+drinks;
-  document.getElementById("total1").innerHTML = + total1 + " EURO";
-}
-function mealTotal2() {
-  let starter = +document.getElementById("starterDishes2").value;
-  let mains = +document.getElementById("mainDishes2").value;
-  let desserts = +document.getElementById("dessertDishes3").value;
-  let drinks = +document.getElementById("drinks2").value;
-  total2 = starter + mains + desserts+drinks;
-  document.getElementById("total2").innerHTML ="    "+ total2 + " EURO";
-}
-function mealTotal3() {
-  let starter = +document.getElementById("starterDishes3").value;
-  let mains = +document.getElementById("mainDishes3").value;
-  let desserts = +document.getElementById("dessertDishes3").value;
-  let drinks = +document.getElementById("drinks3").value;
-  total3 = starter + mains + desserts+drinks;
-  document.getElementById("total3").innerHTML = total3 + " EURO";
-}
-function mealTotal4() {
-  let starter = +document.getElementById("starterDishes4").value;
-  let mains = +document.getElementById("mainDishes4").value;
-  let drinks = +document.getElementById("drinks4").value;
-  let desserts = +document.getElementById("dessertDishes4").value;
-  total4 = starter + mains + desserts+drinks;
-  document.getElementById("total4").innerHTML = total4 + " EURO";
-}
-function mealTotal5() {
-  let starter = +document.getElementById("starterDishes5").value;
-  let mains = +document.getElementById("mainDishes5").value;
-  let drinks = +document.getElementById("drinks5").value;
-  let desserts = +document.getElementById("dessertDishes5").value;
-  total5 = starter + mains + desserts+drinks;
-  document.getElementById("total5").innerHTML =total5 + " EURO";
-}
-function addStarters(){
-  let starter1= +document.getElementById("starterDishes1").value;
-  let starter2= +document.getElementById("starterDishes2").value;
-  let starter3= +document.getElementById("starterDishes3").value;
-  let starter4= +document.getElementById("starterDishes4").value;
-  let starter5= +document.getElementById("starterDishes5").value;
-  startersTotal= starter1+starter2+starter3+starter4+starter5;
-  document.getElementById("startersTotal").innerHTML =startersTotal + " EURO";
-}
+  idName(totalDisplay).value=total1
+  idName(totalDisplay).innerHTML =total1 + " EURO";}
 
-function addMains(){
-  let main1= +document.getElementById("mainDishes1").value;
-  let main2= +document.getElementById("mainDishes2").value;
-  let main3= +document.getElementById("mainDishes3").value;
-  let main4= +document.getElementById("mainDishes4").value;
-  let main5= +document.getElementById("mainDishes5").value;
-  mainsTotal= main1+main2+main3+main4+main5;
-  document.getElementById("mainsTotal").innerHTML =mainsTotal + " EURO";
-}
+  idName("form1").addEventListener("input",function(){
+    mealTotal("starterDishes1","mainDishes1","dessertDishes1","drinks1","total1");
+  }, false);
+  idName("form2").addEventListener("input",function(){
+    mealTotal("starterDishes2","mainDishes2","dessertDishes2","drinks2","total2");
+  }, false);
+  idName("form3").addEventListener("input",function(){
+    mealTotal("starterDishes3","mainDishes3","dessertDishes3","drinks3","total3");
+  }, false);
+  idName("form4").addEventListener("input",function(){
+    mealTotal("starterDishes4","mainDishes4","dessertDishes4","drinks4","total4");
+  }, false);
+  idName("form5").addEventListener("input",function(){
+    mealTotal("starterDishes5","mainDishes5","dessertDishes5","drinks5","total5");
+  }, false);
 
-function addDesserts(){
-  let dessert1= +document.getElementById("dessertDishes1").value;
-  let dessert2= +document.getElementById("dessertDishes2").value;
-  let dessert3= +document.getElementById("dessertDishes3").value;
-  let dessert4= +document.getElementById("dessertDishes4").value;
-  let dessert5= +document.getElementById("dessertDishes5").value;
-  dessertsTotal= dessert1+dessert2+dessert3+dessert4+dessert5;
-  document.getElementById("dessertsTotal").innerHTML =dessertsTotal + " EURO";
-}
-function addDrinks(){
-  let drinks1= +document.getElementById("drinks1").value;
-  let drinks2= +document.getElementById("drinks2").value;
-  let drinks3= +document.getElementById("drinks3").value;
-  let drinks4= +document.getElementById("drinks4").value;
-  let drinks5= +document.getElementById("drinks5").value;
-  drinksTotal= drinks1+drinks2+drinks3+drinks4+drinks5;
-  document.getElementById("drinksTotal").innerHTML =drinksTotal + " EURO";
-}
-
+  function addItems(item1,item2,item3,item4,item5,totalDisplay){
+    let dish1= +idName(item1).value;
+    let dish2= +idName(item2).value;
+    let dish3= +idName(item3).value;
+    let dish4= +idName(item4).value;
+    let dish5= +idName(item5).value;
+    dishTotal= dish1+dish2+dish3+dish4+dish5;
+    idName(totalDisplay).value=dishTotal;
+    idName(totalDisplay).innerHTML =dishTotal + " EURO";
+  }
+  idName("menu").addEventListener("change",function(){
+    addItems("starterDishes1","starterDishes2","starterDishes3","starterDishes4","starterDishes5","startersTotal");
+  }, false);
+  idName("menu").addEventListener("change",function(){
+    addItems("mainDishes1","mainDishes2","mainDishes3","mainDishes4","mainDishes5","mainsTotal");
+  }, false);
+  idName("menu").addEventListener("change",function(){
+    addItems("dessertDishes1","dessertDishes2","dessertDishes3","dessertDishes4","dessertDishes5","dessertsTotal");
+  }, false); 
+  idName("menu").addEventListener("change",function(){
+    addItems("drinks1","drinks2","drinks3","drinks4","drinks5","drinksTotal");
+  }, false);
+  
 
 function totalFinal(){
-  var total;
-  total=total1+total2+total3+total4+total5;
-  document.getElementById("totalFinal").innerHTML = "€"+total+"EUR";
+  total=+idName("startersTotal").value+idName("mainsTotal").value+idName("dessertsTotal").value+idName("drinksTotal").value;
+  idName("totalFinal").innerHTML = "€"+total+"EUR";
 }
 
 
-document.getElementById("form1").addEventListener("input", mealTotal1);
-document.getElementById("form2").addEventListener("input", mealTotal2);
-document.getElementById("form3").addEventListener("input", mealTotal3);
-document.getElementById("form4").addEventListener("input", mealTotal4);
-document.getElementById("form5").addEventListener("input", mealTotal5);
-document.getElementById("menu").addEventListener("change", addStarters);
-document.getElementById("menu").addEventListener("change", addMains);
-document.getElementById("menu").addEventListener("change", addDesserts);
-document.getElementById("menu").addEventListener("change", addDrinks);
-document.getElementById("menu").addEventListener("change", totalFinal);
+idName("menu").addEventListener("change", totalFinal);
 
 
 
 //function that fetches the API and brings it to the webpage
-document.getElementById("myBtn").addEventListener("click", getData);
+idName("myBtn").addEventListener("click", getData);
 
 function getData() {
 
@@ -220,7 +182,7 @@ function getData() {
       });
 
       //writes the user generator on my div with the id output
-      document.getElementById("output").innerHTML = output;
+      idName("output").innerHTML = output;
     });
 }
 
