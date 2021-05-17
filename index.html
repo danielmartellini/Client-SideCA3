@@ -18,13 +18,17 @@
   <main id="pic" >
     <section class="board">
       <div id="passChecker" class="form">
+        <form >
         <div class="formBox">
           <h2>Password Strength Validator</h2>
-          <input type="password" id="passwordSpace" />
+          
+          <input class="myButtons" name="pwd" placeholder="Test your password here:" type="password" id="passwordSpace" pattern="(?=.*[^A-Za-z0-9])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Passwords must fulfill all of the following default requirements" />
+          
           <div class="togglePassword">
             <i class="fa fa-eye"></i>
             <i class="fa fa-eye-slash"></i>
           </div>
+          <button type="submit" class="myButtons">Test Password</button>
           <div class="passPolicies">
             <div class="polLength">8 Characters</div>
             <div class="polUppercase">Contains Uppercase</div>
@@ -33,6 +37,7 @@
             <div class="polSpecial">Contains Special Character</div>
           </div>
         </div>
+        </form>
       </div>
       </div>
       <div class="button">

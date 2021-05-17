@@ -11,7 +11,6 @@
   background-size: cover;
   min-height: 100vh;
   padding: 10vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,32 +138,18 @@
   padding-bottom: 0;
 }
 .arrowRight {
-  position: absolute;
-  max-width: 150px;
-  max-height: 150px;
-  top: 250px;
   right: 55px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  overflow: hidden;
 }
-.arrowRight:hover {
-  -webkit-transform: rotate(-10deg);
-  -moz-transform: rotate(-10deg);
-  -o-transform: rotate(-10deg);
-  -ms-transform: rotate(-10deg);
-  transform: rotate(-10deg);
-}
-
 .arrowLeft {
+  left: 55px;
+}
+.arrowLeft,
+.arrowRight {
   position: absolute;
   max-width: 150px;
   max-height: 150px;
   top: 250px;
-  left: 55px;
+
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -201,11 +186,6 @@
 
 .arrowLeft:hover,
 .arrowRight:hover {
-  -webkit-transform: rotate(-10deg);
-  -moz-transform: rotate(-10deg);
-  -o-transform: rotate(-10deg);
-  -ms-transform: rotate(-10deg);
-  transform: rotate(-10deg);
   -moz-animation-name: roll;
   -moz-animation-duration: 4s;
   -moz-animation-iteration-count: 1;
@@ -321,16 +301,7 @@ select {
 
   border-radius: 50px;
 }
-#runaway-container {
-  position: absolute;
-  width: 150px;
-  margin: 0 auto;
-  margin-top: 100px;
-}
 
-#runaway {
-  width: 150px;
-}
 .padding {
   padding: 10px;
   display: block;
