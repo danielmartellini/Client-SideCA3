@@ -342,3 +342,6 @@ select {
   -ms-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
+#myGitHub {
+  max-width: 150px;
+}
