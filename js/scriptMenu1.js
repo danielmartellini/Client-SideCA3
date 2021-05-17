@@ -1,44 +1,44 @@
-function idName(name) {
-  return document.getElementById(name);
-}
-
-function className(name) {
-  return document.getElementsByClassName(name);
-}
-
-
-$(document).ready(function(){
-
-  $("#startersBtn").click(function(){
+$(document).ready(function () {
+  $("#startersBtn").click(function () {
     $("#myStarters").fadeToggle(500);
   });
 
-  $("#mainsBtn").click(function(){
-    $("#myMains").slideToggle(5000);
+  $("#mainsBtn").click(function () {
+    $("#myMains").slideToggle(1000);
   });
-  
+  $("#dessertsBtn").click(function () {
+    $("#myDesserts").fadeToggle(500);
+  });
+  $("#drinksBtn").click(function () {
+    $("#myDrinks").slideToggle(1000);
+  });
 
+  /*
+  $("#pic").on({
+    mouseenter: function () {
+      $(this).css("background-image", "url(../img/background2.jpg)");
+    },
+  });*/
+  var picture = $("#pic");
+
+  var backgrounds = new Array(
+    "url(../img/background.jpg)",
+    "url(../img/background2.jpg)",
+    "url(../img/background3.jpg)"
+  );
+  //setting a counter
+  var currentPic = 0;
+
+  function nextPicture() {
+    picture.css(
+      "background-image",
+      //when it reaches the last img of the array it goes back to the first one, so it's essentially a loop
+      backgrounds[(currentPic = ++currentPic % backgrounds.length)]
+    );
+
+    setTimeout(nextPicture, 2000);
+  }
+  //Here I'm calling the function nextPicure
+  setTimeout(nextPicture, 2000);
+  picture.css("background-image", backgrounds[0]);
 });
-
-
-
-function showHide(parameter){
-  var a=0;
-if ( a == 1) {
-  idName(parameter).style.display = "none";
-  return (a = 0);
-} else {
-  idName(parameter).style.display = "flex";
-  return (a = 1);
-}
-}
-
-
-
-idName("dessertsBtn").addEventListener("click",function(){
-  showHide("myDesserts");
-}, false);
-
-idName("drinksBtn").addEventListener("click",function(){
-  showHide("myDrinks");
-}, false);

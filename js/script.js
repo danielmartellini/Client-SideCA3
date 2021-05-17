@@ -1,8 +1,4 @@
-
-
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"
+//I've created this function so I can access my classes typing less, instead of document.getElementById(name) I can use idName(name) 
 function idName(name) {
   return document.getElementById(name);
 }
@@ -14,7 +10,6 @@ function className(name) {
 
 //this is the function that hides the password checker, and shows it again after in case it's been hidden
 var a;
-var b = "passChecker";
 function showHide(parameter){
   if ( a == 1) {
     idName(parameter).style.display = "flex";
@@ -30,7 +25,7 @@ idName("clickHide").addEventListener("click",function(){
 }, false);
 
 
-
+//here I'm adding a class to my div, so I can style/change back, only clicking the button
 
 className("togglePassword")[0].addEventListener("click", function () {
   className("togglePassword")[0].classList.toggle("active");
@@ -86,7 +81,7 @@ var meal1=idName("startersTotal");
 
 var total=0;
 
-
+//function to add-up a meal total
 
 function mealTotal(param1,param2,param3,param4,totalDisplay) {
   let starter = +idName(param1).value;
@@ -112,6 +107,8 @@ function mealTotal(param1,param2,param3,param4,totalDisplay) {
   idName("form5").addEventListener("input",function(){
     mealTotal("starterDishes5","mainDishes5","dessertDishes5","drinks5","total5");
   }, false);
+
+  //function to add-up a single column, i.e, all starters, all drinks...
 
   function addItems(item1,item2,item3,item4,item5,totalDisplay){
     let dish1= +idName(item1).value;
@@ -142,6 +139,7 @@ function totalFinal(){
   idName("totalFinal").innerHTML = "€"+total+"EUR";
 }
 
+//using my function totalFinal to update my total space, which shows all of the orders added up
 
 idName("menu").addEventListener("change", totalFinal);
 
