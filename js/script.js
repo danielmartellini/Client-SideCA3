@@ -6,16 +6,40 @@ function idName(name) {
 function className(name) {
   return document.getElementsByClassName(name);
 }
+console.log($("li:first").html());
 
 $(document).ready(function () {
   //this function will be able to Hide my password Checker
   $("#clickHide").click(function () {
     $("#passChecker").slideToggle(1000);
   });
-
-  $("#myBtn").click(function () {
+  //changes the text on the btn
+  $("#generateGuests").click(function () {
     $(this).html("Generate New Guests");
   });
+  console.log($("li:first").text());
+
+  $("#form1").css("display", "none");
+  $("#orderOne").click(function () {
+    $("#form1").slideToggle(500);
+  });
+  $("#form2").css("display", "none");
+  $("#orderTwo").click(function () {
+    $("#form2").slideToggle(500);
+  });
+  $("#form3").css("display", "none");
+  $("#orderThree").click(function () {
+    $("#form3").slideToggle(500);
+  });
+  $("#form4").css("display", "none");
+  $("#orderFour").click(function () {
+    $("#form4").slideToggle(500);
+  });
+  $("#form5").css("display", "none");
+  $("#orderFive").click(function () {
+    $("#form5").slideToggle(500);
+  });
+  $(".guestBtn").css("padding", "5px");
 });
 
 //this is the function that hides the password checker, and shows it again after in case it's been hidden
@@ -252,7 +276,7 @@ function totalFinal() {
 idName("menu").addEventListener("change", totalFinal);
 
 //function that fetches the API and brings it to the webpage
-idName("myBtn").addEventListener("click", getData);
+idName("generateGuests").addEventListener("click", getData);
 
 function getData() {
   //Get API
@@ -270,7 +294,7 @@ function getData() {
                 <div class="container">
                     <div>
                         <ul>
-                            <li>Name: <b>${lists.name.first}</b></li>
+                            <li class="guestName" >Name: <b>${lists.name.first}</b></li>
                             <li  style="list-style-type: none;"><img id="thumbImg" src="${lists.picture.large}"></li>
                             <li>Number: ${lists.cell}</li>
                             <li>Age: ${lists.dob.age}</li>

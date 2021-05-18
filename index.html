@@ -10,12 +10,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+ 
+<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
 
   <title>CA3</title>
 </head>
 
 <body>
   <main id="pic" >
+    <div class="pageTitle">
+      Little Italy Pizza
+    </div>
     <section class="board">
       <div id="passChecker" class="form">
         <form >
@@ -46,13 +51,16 @@
       <hr>
       <div class="container">
         <h1>Generate Guest's Profiles </h1>
-        <button class="myButtons" id="myBtn">Get Data</button>
+        <button class="myButtons" id="generateGuests">Get Data</button>
       </div>
       <div id="output"></div>
       <hr>
 
       <div class="menu" id="menu">
         <h2>Choose the dishes, click on the Pizza if you wish to see the Menu:</h2>
+        <div class="guestBtn">
+        <button class="myButtons" id="orderOne">1st guest's order</button>
+      </div>
         <form class="form" id="form1">
           <select name="starters" id="starterDishes1">
             <option value="0">SELECT STARTER</option>
@@ -83,8 +91,9 @@
           <div class="totalBox" id="total1"></div>
           
         </form>
-      
-       
+        <div class="guestBtn">
+        <button class="myButtons" id="orderTwo">2nd guest's order</button>
+        </div>
         <form class="form" id="form2">
           <select name="starters" id="starterDishes2">
             <option value="0">SELECT STARTER</option>
@@ -116,8 +125,9 @@
           
             <div class="totalBox" id="total2"></div>
         </form>
-       
-       
+        <div class="guestBtn">
+        <button class="myButtons" id="orderThree">3rd guest's order</button>
+        </div>
         <form class="form" id="form3">
           <select name="starters" id="starterDishes3">
             <option value="0">SELECT STARTER</option>
@@ -147,7 +157,9 @@
         
           <div class="totalBox" id="total3"></div>
         </form>
-       
+        <div class="guestBtn">
+        <button class="myButtons" id="orderFour">4th guest's order</button>
+      </div>
         <form class="form" id="form4">
           <select name="starters" id="starterDishes4">
             <option value="0">SELECT STARTER</option>
@@ -177,7 +189,9 @@
         
           <div class="totalBox" id="total4"></div>
         </form>
-              
+        <div class="guestBtn">
+        <button class="myButtons" id="orderFive">5th guest's order</button>
+      </div>
         <form class="form" id="form5">
           <select name="starters" id="starterDishes5">
             <option value="0">SELECT STARTER</option>
