@@ -326,9 +326,9 @@ select {
   cursor: pointer;
 }
 .pageTitle {
-  font-size: 300%;
+  font-size: 250%;
   position: absolute;
-  top: 40px;
+  top: 12px;
   font-family: "Pattaya", sans-serif;
 
   justify-content: center;
