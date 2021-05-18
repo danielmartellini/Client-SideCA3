@@ -54,11 +54,13 @@ $(document).ready(function () {
       backgrounds[(currentPic = ++currentPic % backgrounds.length)]
     );
 
-    setTimeout(nextPicture, 3000);
+    setTimeout(nextPicture, 2000);
   }
-  //Here I'm calling the function nextPicure
-  setTimeout(nextPicture, 3000);
+  //Here I'm calling the function nextPicure, back ground will change very 2 secs
+  setTimeout(nextPicture, 2000);
   picture.css("background-image", backgrounds[0]);
+
+  //animating my menu, the card that you're hovering will get bigger and then when you leave it, it gets smaller
 
   $(".menuCard")
     .on("mouseenter", function () {

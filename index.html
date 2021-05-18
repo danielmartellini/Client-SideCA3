@@ -17,22 +17,27 @@
 </head>
 
 <body>
+  <!--Created a div for my background image-->
   <main id="pic" >
+     <!--div for my Logo-->
     <div class="pageTitle">
       Little Italy Pizza
     </div>
+     <!--The gray aread on the website, kind of the main-->
     <section class="board">
+       <!--my password checker that can be hidden after used-->
       <div id="passChecker" class="form">
         <form >
         <div class="formBox">
           <h2>Password Strength Validator</h2>
           
           <input class="myButtons" name="pwd" placeholder="Test your password here:" type="password" id="passwordSpace" pattern="(?=.*[^A-Za-z0-9])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Passwords must fulfill all of the following default requirements" />
-          
+           <!--using the eye image so u can switch from password mode to normal letters-->
           <div class="togglePassword">
             <i class="fa fa-eye"></i>
             <i class="fa fa-eye-slash"></i>
           </div>
+           <!--can only submit if it matches the pattern-->
           <button type="submit" class="myButtons">Test Password</button>
           <div class="passPolicies">
             <div class="polLength">8 Characters</div>
@@ -45,17 +50,21 @@
         </form>
       </div>
       </div>
+       <!--this is the button that hides it, it's hidden with jQuery-->
       <div class="button">
         <button class="myButtons" id="clickHide">Password Validator</button>
       </div>
       <hr>
+       <!--user generator area-->
       <div class="container">
         <h1>Generate Guest's Profiles </h1>
         <button class="myButtons" id="generateGuests">Get Data</button>
       </div>
+       <!--fetches data from the api-->
       <div id="output"></div>
       <hr>
-
+ <!--This is where my food selector starts, I created the objects by setting a value and a name for them-->
+ <!--there will be 5 of those, one for each customer, that can be hidden with a button too-->
       <div class="menu" id="menu">
         <h2>Choose the dishes, click on the Pizza if you wish to see the Menu:</h2>
         <div class="guestBtn">
@@ -243,10 +252,11 @@
       
 
     </section>
+    <!--This is my arrow that can take you to the second page-->
     <div>
       <a href="page2.html"><img   class="arrowRight" src="img/pizzaArrowRight.png"></a>
     </div>
-    
+    <!--Linking jQuery and my Script-->
   </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/script.js"></script>

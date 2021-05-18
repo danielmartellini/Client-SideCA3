@@ -6,7 +6,6 @@ function idName(name) {
 function className(name) {
   return document.getElementsByClassName(name);
 }
-console.log($("li:first").html());
 
 $(document).ready(function () {
   //this function will be able to Hide my password Checker
@@ -19,6 +18,7 @@ $(document).ready(function () {
   });
   console.log($("li:first").text());
 
+  //setting the for display to none and now I can change it from none to flex, just pressing the button
   $("#form1").css("display", "none");
   $("#orderOne").click(function () {
     $("#form1").slideToggle(500);
@@ -39,27 +39,12 @@ $(document).ready(function () {
   $("#orderFive").click(function () {
     $("#form5").slideToggle(500);
   });
+  //adding some css properties to my element
   $(".guestBtn").css("padding", "5px");
 });
 
-//this is the function that hides the password checker, and shows it again after in case it's been hidden
-/*var a;
-function showHide(parameter){
-  if ( a == 1) {
-    idName(parameter).style.display = "flex";
-    return (a = 0);
-  } else {
-    idName(parameter).style.display = "none";
-    return (a = 1);
-  }
-}
-
-idName("clickHide").addEventListener("click",function(){
-  showHide("passChecker");
-}, false);
-*/
-
 //here I'm adding a class to my div, so I can style/change back, only clicking the button
+//In this section I didn't use jQuery
 
 className("togglePassword")[0].addEventListener("click", function () {
   className("togglePassword")[0].classList.toggle("active");
@@ -194,6 +179,7 @@ idName("form5").addEventListener(
 );
 
 //function to add-up a single column, i.e, all starters, all drinks...
+//I didn't use the same function from before because one had 6 parameters and the other had 5
 
 function addItems(item1, item2, item3, item4, item5, totalDisplay) {
   let dish1 = +idName(item1).value;
